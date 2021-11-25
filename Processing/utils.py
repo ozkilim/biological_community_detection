@@ -19,19 +19,24 @@ def presentCommunities(G,communities):
     a visualisation of the communities each 
     with its own coloring
     '''
-
+    plt.figure(figsize=(10,10))
     pos = nx.spring_layout(G)
     nx.draw(G, pos, edge_color='k',  with_labels=False,
-            font_weight='light', node_size= 20, width= 0.9)
-    colors = "bgrcmykw"
+            font_weight='light', node_size= 3, width= 0.2)
     # visualise the communities ground truth by coloring nodes.
+    
     for idx,c in enumerate(communities):
+        color = generate_color()
+
         # Make new random color
-        nx.draw_networkx_nodes(G, pos, nodelist=c, node_color=colors[idx],node_size=20)
+        nx.draw_networkx_nodes(G, pos, nodelist=c, node_color=color,node_size=3)
         
     plt.show()
 
 def generate_color():
+    '''
+    This function generates a random Hex color
+    '''
     color = '#{:02x}{:02x}{:02x}'.format(*map(lambda x: random.randint(0, 255), range(3)))
     return color
 
@@ -42,15 +47,34 @@ def presentBioCommunities(G,communities):
     a visualisation of the communities each 
     with its own coloring
     '''
-
+    plt.figure(figsize=(10,10))
     pos = nx.spring_layout(G)
     nx.draw(G, pos, edge_color='k',  with_labels=False,
-            font_weight='light', node_size= 20, width= 0.9)
+            font_weight='light', node_size= 3, width= 0.2)
 
     # visualise the communities ground truth by coloring nodes.
     for idx,c in enumerate(communities):
         # Make new random color
         color = generate_color()
-        nx.draw_networkx_nodes(G, pos, nodelist=c, node_color=color,node_size=20)
+        nx.draw_networkx_nodes(G, pos, nodelist=c, node_color=color,node_size=3)
         
     plt.show()
+
+def NMI_reshape(communities,n):
+    '''
+    This function prepares the community structure for NMI calculation.
+    Turn [1,5,6],[2,3,4] into [0 1 1 1 0 0] format for NMI calculation.
+    -----
+    Input:
+    communities = found community structre in form :[1,5,6],[2,3,4]
+    n  = number of nodes in network
+    -----
+    Output 
+    [0 1 1 1 0 0] format with community id for each node
+    '''
+    labelset = list(np.zeros(n)) # Define empty list of length number of nodes
+    for communit_id, community in enumerate(communities):
+        for node in community:
+            labelset[node] = communit_id
+
+    return labelset
