@@ -78,3 +78,78 @@ def NMI_reshape(communities,n):
             labelset[node] = communit_id
 
     return labelset
+
+
+class CommunityDetectionAlgorithms:
+
+    def girvan_newman_calc(G,k):
+        '''
+        Girvan newman community finding algorithm
+        
+        Inputs
+        ------
+        Graph G
+
+        Outputs 
+        ------
+        Parition of graph into communties GN_partitions
+        '''
+        partition_girvan_newman = girvan_newman(G)
+
+        for communities in itertools.islice(partition_girvan_newman, k):
+            GN_partitions = tuple(sorted(c) for c in communities)
+
+        return GN_partitions
+
+    def infomap_calc(G):
+        '''
+        Infomap community finding algorithm.
+
+        Inputs
+        ------
+        Graph G
+
+        Outputs
+        ------
+        Parition of graph into communties infomap_partition
+        '''
+
+        im = Infomap(silent=True)
+        im.add_networkx_graph(G)
+        im.run()
+
+        infomap_partition = [[] for _ in range(im.num_top_modules)]
+        for node in im.tree:
+            if node.is_leaf:
+                infomap_partition[node.module_id-1].append(node.node_id)
+
+        return infomap_partition
+
+    def spectral_cluster_calc(G,k):
+        '''
+        Spectral clustering algorithm.
+        
+        Inputs
+        ------
+        Graph G
+
+        Outputs 
+        ------
+        Parition of graph into communties sc_partition
+        '''
+
+        # Get adjacency-matrix as numpy-array
+        adj_mat = nx.to_numpy_matrix(G)
+        # Cluster
+        sc = SpectralClustering(k, affinity='precomputed', n_init=100)
+        sc.fit(adj_mat)
+
+        partition_labels = sc.labels_.tolist()
+        # Turn back into partition data structure ([],[],[]...)
+        # position in list is node number value is community id
+
+        sc_partition = [[] for _ in range(max(partition_labels)+1)]
+        for idx,c in enumerate(partition_labels):
+            sc_partition[c].append(idx)
+
+        return sc_partition
