@@ -2,14 +2,9 @@
 ### Comparison of community detection algorithms on synthetic and cortical networks. 
 
 ## Baseline reasults
-### Normalised mutual information
 
-![image info](figures/n250NMI.png)![image info](figures/n500NMI.png)![image info](figures/n1000NMI.png)
-
-
-### Modularity
-
-![image info](figures/n250Q.png)![image info](figures/n500Q.png)![image info](figures/n1000Q.png)
-
-
-
+| Normalised mutual information      | Modularity     |
+| -------------- | -------------- |
+| ![image info](figures/n250NMI.png)   | ![image info](figures/n250Q.png)   |
+| ![image info](figures/n500NMI.png)| ![image info](figures/n500Q.png) |
+| ![image info](figures/n1000NMI.png)| ![image info](figures/n1000Q.png) |
