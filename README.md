@@ -6,7 +6,7 @@
 1. The normalised mutual information: 
 2. The modularity:
 
-##### THese scaores are with respect to the ground truth communities. 
+##### These scores are with respect to the ground truth communities. 
 
 ## Baseline reasults
 
@@ -19,4 +19,8 @@
 | ![image info](figures/n1000NMI.png)| ![image info](figures/n1000Q.png) |
 
 ## Reasults of community detection cortical netowrks.
+#### Below is an evaluation of the detected communities overlap with the node metadata treated as communities. 
 
+| Cell role     | Neurotransmitter     |
+| -------------- | -------------- |
+| ![image info](figures/cortex_community_roles_overlap.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap.png)   |

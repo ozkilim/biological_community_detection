@@ -80,6 +80,29 @@ def NMI_reshape(communities,n):
     return labelset
 
 
+def NMI_reshape_cortical(communities,n):
+    '''
+    This function prepares the community structure for NMI calculation.
+    Turn ['n1','n5','n6'],['n2','n3','n4'] into [0 1 1 1 0 0] format for NMI calculation.
+    -----
+    Input:
+    communities = found community structre in form :[1,5,6],[2,3,4]
+    n  = number of nodes in network
+    -----
+    Output 
+    [0 1 1 1 0 0] format with community id for each node
+    '''
+    labelset = list(np.zeros(n)) # Define empty list of length number of nodes
+    for communit_id, community in enumerate(communities):
+        for node in community:
+            node_clean = int(node[1:]) # Clean nodes with id such as 'nx' where x is an integer that needs to be extracted
+            labelset[node_clean] = communit_id
+
+    return labelset
+
+    
+
+
 class CommunityDetectionAlgorithms:
 
     def girvan_newman_calc(G,k):
