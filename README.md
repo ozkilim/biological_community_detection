@@ -2,6 +2,8 @@
 
 #### The aim of this project is to evvaluate community detection algorithms on synthetic and cortical networks.
 
+### Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
+
 #### The algorithms will be evaluated with:
 1. The normalised mutual information: 
 2. The modularity:
@@ -24,3 +26,10 @@
 | Cell role     | Neurotransmitter     |
 | -------------- | -------------- |
 | ![image info](figures/cortex_community_roles_overlap.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap.png)   |
+
+
+Referances:
+
+1. Fortunato, S., & Hric, D. (2016). Community detection in networks: A user guide. In arXiv [physics.soc-ph]. http://arxiv.org/abs/1608.00163
+
+2. Fortunato, S. (2009). Community detection in graphs. In arXiv [physics.soc-ph]. http://arxiv.org/abs/0906.0612
