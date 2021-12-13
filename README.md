@@ -2,9 +2,9 @@
 
 
 
-#### The aim of this project is to evaluate community detection algorithms on synthetic and cortical networks.
+#### The aim of this project is to evaluate community detection algorithms on synthetic and C. elegans connectome networks.
 
-### Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
+* * Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
 
 #### The algorithms will be evaluated with:
 1. The normalised mutual information: 
