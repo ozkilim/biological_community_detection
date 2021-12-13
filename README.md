@@ -1,5 +1,30 @@
 # biological_community_detection
 
+- [biological_community_detection](#biological_community_detection)
+      - [The aim of this project is to evaluate community detection algorithms on synthetic and cortical networks.](#the-aim-of-this-project-is-to-evaluate-community-detection-algorithms-on-synthetic-and-cortical-networks)
+    - [Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing](#full-course-notes-on-the-topic-can-be-found-here-httpsdocsgooglecomdocumentd19iig6helzsp0fxonjmt8ymzqanoht_8bsvzqtoswgfyedituspsharing)
+      - [The algorithms will be evaluated with:](#the-algorithms-will-be-evaluated-with)
+        - [These scores are with respect to the ground truth communities.](#these-scores-are-with-respect-to-the-ground-truth-communities)
+  - [Baseline reasults](#baseline-reasults)
+      - [Below show the variatoon if Normalised mutual information and Modularity for the synthetic LFR graph with varying number of nodes andmixing perameter between 0-1.](#below-show-the-variatoon-if-normalised-mutual-information-and-modularity-for-the-synthetic-lfr-graph-with-varying-number-of-nodes-andmixing-perameter-between-0-1)
+        - [LFR synthetic graph with ground state communities colored.](#lfr-synthetic-graph-with-ground-state-communities-colored)
+  - [Real world netwroks : Community detection for conmnectome cortical netowrks.](#real-world-netwroks--community-detection-for-conmnectome-cortical-netowrks)
+      - [The microscopic worm C. elegans has 302 neurons with approximately 8,000 synapses and is the only model organism in which the wiring diagram of the entire nervous system is almost completely known.](#the-microscopic-worm-c-elegans-has-302-neurons-with-approximately-8000-synapses-and-is-the-only-model-organism-in-which-the-wiring-diagram-of-the-entire-nervous-system-is-almost-completely-known)
+        - [A 'connectome' is a specific, cell-to-cell mapping of axonal tracts between neurons, created from cellular data like electron microscopy.](#a-connectome-is-a-specific-cell-to-cell-mapping-of-axonal-tracts-between-neurons-created-from-cellular-data-like-electron-microscopy)
+        - [C elegans are of huge interest to the feild of bioinformatics as they provide a link between nervous system connectivity and machanical movement. This was demonstrated https://www.youtube.com/watch?v=YWQnzylhgHc where the connectome was combined with "muscle" movements of the worm with some simple algorithms> these were translated into a robot.](#c-elegans-are-of-huge-interest-to-the-feild-of-bioinformatics-as-they-provide-a-link-between-nervous-system-connectivity-and-machanical-movement-this-was-demonstrated-httpswwwyoutubecomwatchvywqnzylhghc-where-the-connectome-was-combined-with-muscle-movements-of-the-worm-with-some-simple-algorithms-these-were-translated-into-a-robot)
+      - [Below shows the connectome of a c eligan projected onto the body of the worm.](#below-shows-the-connectome-of-a-c-eligan-projected-onto-the-body-of-the-worm)
+      - [Below is the network in our code environment.](#below-is-the-network-in-our-code-environment)
+        - [> The data contained information on the direction and number of connections via chemical synapses and electrical junctions among neurons in the entire nervous system as well as one-dimensional spatial positions of neurons (i.e., somal centers) along the anterior-posterior body axis. All connections between non-pharyngeal neurons were included except those of CANL/R and VC6, which did not have obvious synapses. Consequently, the model connectome had 279 neurons.](#-the-data-contained-information-on-the-direction-and-number-of-connections-via-chemical-synapses-and-electrical-junctions-among-neurons-in-the-entire-nervous-system-as-well-as-one-dimensional-spatial-positions-of-neurons-ie-somal-centers-along-the-anterior-posterior-body-axis-all-connections-between-non-pharyngeal-neurons-were-included-except-those-of-canlr-and-vc6-which-did-not-have-obvious-synapses-consequently-the-model-connectome-had-279-neurons)
+      - [An application of communty finding was applied tot he this connectome to investigate the community structure of the netwrok with respect to its node metadata.](#an-application-of-communty-finding-was-applied-tot-he-this-connectome-to-investigate-the-community-structure-of-the-netwrok-with-respect-to-its-node-metadata)
+      - [Below is an evaluation of the detected communities overlap with the node metadata treated as communities.](#below-is-an-evaluation-of-the-detected-communities-overlap-with-the-node-metadata-treated-as-communities)
+      - [It can be seen that each method predicts around 5 communities for the connectome. There were 3 cell role types and 7 Neurotransmitter types so it seemed reasonable to compare this node metadata to the found communites.](#it-can-be-seen-that-each-method-predicts-around-5-communities-for-the-connectome-there-were-3-cell-role-types-and-7-neurotransmitter-types-so-it-seemed-reasonable-to-compare-this-node-metadata-to-the-found-communites)
+      - [It may be reasonable to imagine come community strcture within Motor, Sensory and Interneuron nodes.](#it-may-be-reasonable-to-imagine-come-community-strcture-within-motor-sensory-and-interneuron-nodes)
+        - [Here we can see that both the Cell Role and Neurotransmitter status of each node are not aligned with the community strucutre in connectivity of the connectome. There is existance of weak community structure but of weak biological significance.](#here-we-can-see-that-both-the-cell-role-and-neurotransmitter-status-of-each-node-are-not-aligned-with-the-community-strucutre-in-connectivity-of-the-connectome-there-is-existance-of-weak-community-structure-but-of-weak-biological-significance)
+        - [Given that most bilateral neuronal pairs of C. elegans have similar functional roles [5] and accepting the principle of structure-function association in evolutionary biology [6], structural clusters driven by an appropriate community detection method should not assign each member of a bilateral neuronal pair to a different structural cluster.](#given-that-most-bilateral-neuronal-pairs-of-c-elegans-have-similar-functional-roles-5-and-accepting-the-principle-of-structure-function-association-in-evolutionary-biology-6-structural-clusters-driven-by-an-appropriate-community-detection-method-should-not-assign-each-member-of-a-bilateral-neuronal-pair-to-a-different-structural-cluster)
+- [Community struacutre of CNN vs GNN](#community-struacutre-of-cnn-vs-gnn)
+      - [Of greater interest with may give evidence of current neural network architectures being poor representations of simple connectomes and graph neural networks being more of a better fit when moving towards biologically inspired artificail neural networks.](#of-greater-interest-with-may-give-evidence-of-current-neural-network-architectures-being-poor-representations-of-simple-connectomes-and-graph-neural-networks-being-more-of-a-better-fit-when-moving-towards-biologically-inspired-artificail-neural-networks)
+        - [> Because brain structure is closely related to function, an understanding of the topological structure of neuronal organiza- tion in the brain is crucial for insight into how neuronal networks perform their precise functions. Understnading community structure in the brain is of critical importance because it provides valuable clues regarding the relationship between anatomical clusters and functional circuits.](#-because-brain-structure-is-closely-related-to-function-an-understanding-of-the-topological-structure-of-neuronal-organiza--tion-in-the-brain-is-crucial-for-insight-into-how-neuronal-networks-perform-their-precise-functions-understnading-community-structure-in-the-brain-is-of-critical-importance-because-it-provides-valuable-clues-regarding-the-relationship-between-anatomical-clusters-and-functional-circuits)
+
 #### The aim of this project is to evaluate community detection algorithms on synthetic and cortical networks.
 
 ### Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
@@ -46,7 +71,7 @@ Eeach node holds some metadata in the form of:
 - neurotransmitter: text string of type of neurotransmitter
 
 #### Below is the network in our code environment. 
-##### The data contained information on the direction and number of connections via chemical synapses and electrical junctions among neurons in the entire nervous system as well as one-dimensional spatial positions of neurons (i.e., somal centers) along the anterior-posterior body axis. All connections between non-pharyngeal neurons were included except those of CANL/R and VC6, which did not have obvious synapses. Consequently, the model connectome had 279 neurons.
+##### > The data contained information on the direction and number of connections via chemical synapses and electrical junctions among neurons in the entire nervous system as well as one-dimensional spatial positions of neurons (i.e., somal centers) along the anterior-posterior body axis. All connections between non-pharyngeal neurons were included except those of CANL/R and VC6, which did not have obvious synapses. Consequently, the model connectome had 279 neurons.
 
 ![image info](figures/cortex_graph.png)
 
@@ -64,12 +89,15 @@ Eeach node holds some metadata in the form of:
 ##### Here we can see that both the Cell Role and Neurotransmitter status of each node are not aligned with the community strucutre in connectivity of the connectome. There is existance of weak community structure but of weak biological significance. 
 
 
-# Community struacutre of CNN vs GNN
+##### Given that most bilateral neuronal pairs of C. elegans have similar functional roles [5] and accepting the principle of structure-function association in evolutionary biology [6], structural clusters driven by an appropriate community detection method should not assign each member of a bilateral neuronal pair to a different structural cluster.
 
+
+
+# Community struacutre of CNN vs GNN
 
 #### Of greater interest with may give evidence of current neural network architectures being poor representations of simple connectomes and graph neural networks being more of a better fit when moving towards biologically inspired artificail neural networks. 
 
-##### Because brain structure is closely related to function, an understanding of the topological structure of neuronal organiza- tion in the brain is crucial for insight into how neuronal networks perform their precise functions. Understnading community structure in the brain is of critical importance because it provides valuable clues regarding the relationship between anatomical clusters and functional circuits.
+##### > Because brain structure is closely related to function, an understanding of the topological structure of neuronal organiza- tion in the brain is crucial for insight into how neuronal networks perform their precise functions. Understnading community structure in the brain is of critical importance because it provides valuable clues regarding the relationship between anatomical clusters and functional circuits.
 
 References:
 
@@ -80,3 +108,7 @@ References:
 3. https://neurodata.io/project/connectomes/
 
 4. Topological Cluster Analysis Reveals the Systemic Organization of the Caenorhabditis elegans Connectome Y Sohn, MK Choi, YY Ahn, J Lee… - PLoS computational …, 2011 - journals.plos.org https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3098222/
+
+5. White JG, Southgate E, Thomson JN, Brenner S (1986) The Structure of the Nervous System of the Nematode Caenorhabditis elegans. Phil Trans R Soc Lond B 314: 1–340.
+
+6. Kandel ER, Schwartz JH, Jessell TM (2000) Principles of Neural Science. New York: McGraw-Hill. pp 983–997.
