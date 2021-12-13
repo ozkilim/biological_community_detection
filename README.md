@@ -1,5 +1,13 @@
 # Biological Community Detection 
 
+- [Biological Community Detection](#biological-community-detection)
+     
+  - [Baseline reasults](#baseline-reasults)
+       
+  - [Real world netwroks : Community detection for conmnectome cortical netowrks.](#real-world-netwroks--community-detection-for-conmnectome-cortical-netowrks)
+      
+  - [Next steps](#next-steps)
+   
 #### The aim of this project is to evaluate community detection algorithms on synthetic and C. elegans connectome networks.
 
 * Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
