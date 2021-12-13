@@ -23,8 +23,18 @@
 | ![image info](figures/n500NMI.png)| ![image info](figures/n500Q.png) |
 | ![image info](figures/n1000NMI.png)| ![image info](figures/n1000Q.png) |
 
-## Reasults of community detection cortical netowrks.
+## Reasults of community detection conmnectome cortical netowrks.
+##### A 'connectome' is a specific, cell-to-cell mapping of axonal tracts between neurons, created from cellular data like electron microscopy. 
 ![image info](figures/c-elegans-fig01-20190308092545.jpg)
+
+Eeach node holds some metadata in the form of:
+
+- cell_id : auto-inc cell ID
+- cell_name : official cell name, from original brenner paper
+- cell_class : an attempt at determining the cell class
+- soma_pos : position along the body axis, range : [0, 1]
+- role: text string of Motor, sensory, interneuron
+- neurotransmitter: text string of type of neurotransmitter
 
 ![image info](figures/cortex_graph.png)
 
@@ -39,3 +49,5 @@ References:
 1. Fortunato, S., & Hric, D. (2016). Community detection in networks: A user guide. In arXiv [physics.soc-ph]. http://arxiv.org/abs/1608.00163
 
 2. Fortunato, S. (2009). Community detection in graphs. In arXiv [physics.soc-ph]. http://arxiv.org/abs/0906.0612
+
+3. https://neurodata.io/project/connectomes/
