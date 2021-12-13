@@ -1,4 +1,4 @@
-# ** Biological Community Detection **
+# Biological Community Detection 
 
 
 
@@ -48,7 +48,7 @@ Eeach node holds some metadata in the form of:
 - neurotransmitter: text string of type of neurotransmitter
 
 #### Below is the network in our code environment. 
-##### > The data contained information on the direction and number of connections via chemical synapses and electrical junctions among neurons in the entire nervous system as well as one-dimensional spatial positions of neurons (i.e., somal centers) along the anterior-posterior body axis. All connections between non-pharyngeal neurons were included except those of CANL/R and VC6, which did not have obvious synapses. Consequently, the model connectome had 279 neurons.
+> The data contained information on the direction and number of connections via chemical synapses and electrical junctions among neurons in the entire nervous system as well as one-dimensional spatial positions of neurons (i.e., somal centers) along the anterior-posterior body axis. All connections between non-pharyngeal neurons were included except those of CANL/R and VC6, which did not have obvious synapses. Consequently, the model connectome had 279 neurons.
 
 ![image info](figures/cortex_graph.png)
 
@@ -74,7 +74,7 @@ Eeach node holds some metadata in the form of:
 
 #### Of greater interest with may give evidence of current neural network architectures being poor representations of simple connectomes and graph neural networks being more of a better fit when moving towards biologically inspired artificail neural networks. 
 
-##### > Because brain structure is closely related to function, an understanding of the topological structure of neuronal organiza- tion in the brain is crucial for insight into how neuronal networks perform their precise functions. Understnading community structure in the brain is of critical importance because it provides valuable clues regarding the relationship between anatomical clusters and functional circuits.
+> Because brain structure is closely related to function, an understanding of the topological structure of neuronal organiza- tion in the brain is crucial for insight into how neuronal networks perform their precise functions. Understnading community structure in the brain is of critical importance because it provides valuable clues regarding the relationship between anatomical clusters and functional circuits.
 
 References:
 
