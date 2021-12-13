@@ -24,6 +24,10 @@
 | ![image info](figures/n1000NMI.png)| ![image info](figures/n1000Q.png) |
 
 ## Reasults of community detection cortical netowrks.
+![image info](figures/c-elegans-fig01-20190308092545.jpg)
+
+![image info](figures/cortex_graph.png)
+
 #### Below is an evaluation of the detected communities overlap with the node metadata treated as communities. 
 
 | Cell role     | Neurotransmitter     |
