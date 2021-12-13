@@ -27,8 +27,10 @@
 ##### A 'connectome' is a specific, cell-to-cell mapping of axonal tracts between neurons, created from cellular data like electron microscopy. 
 
 ### C elegans are of huge interest to the feild of bioinformatics as they provide a link between nervous system connectivity and machanical movement. This was demonstrated https://www.youtube.com/watch?v=YWQnzylhgHc where the connectome was combined with "muscle" movements of the worm with some simple algorithms> these were translated into a robot.
- 
+
 ![image info](figures/c-elegans-fig01-20190308092545.jpg)
+
+### Below shows the connectome of a c eligan projected onto the body of the worm. 
 ![image info](figures/medium.png)
 
 Eeach node holds some metadata in the form of:
@@ -40,9 +42,15 @@ Eeach node holds some metadata in the form of:
 - role: text string of Motor, sensory, interneuron
 - neurotransmitter: text string of type of neurotransmitter
 
+### Below is the network 
 ![image info](figures/cortex_graph.png)
 
+### An application of communty finding was applied tot he this connectome to investigate the community structure of the netwrok with respect to its node metadata. 
 #### Below is an evaluation of the detected communities overlap with the node metadata treated as communities. 
+
+### It can be seen that each method predicts around 5 communities for the connectome. There were 3 cell role types and 7 Neurotransmitter types so it seemed reasonable to compare this node metadata to the found communites. 
+
+### It may be reasonable to imagine come community strcture within Motor, Sensory and Interneuron nodes. 
 
 | Cell role     | Neurotransmitter     |
 | -------------- | -------------- |
