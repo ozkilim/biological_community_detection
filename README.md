@@ -1,14 +1,15 @@
 # Biological Community Detection 
 
-
-
 #### The aim of this project is to evaluate community detection algorithms on synthetic and C. elegans connectome networks.
 
-* * Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
+* Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
 
 #### The algorithms will be evaluated with:
-1. The normalised mutual information: 
-2. The modularity:
+
+| Normalised mutual information      | Modularity     |
+| -------------- | -------------- |
+| ![image info](figures/nmi.png)   | ![image info](figures/modularity.png)   |
+
 
 ##### These scores are with respect to the ground truth communities. 
 
@@ -34,20 +35,18 @@
 ##### C elegans are of huge interest to the feild of bioinformatics as they provide a link between nervous system connectivity and machanical movement. This was demonstrated https://www.youtube.com/watch?v=YWQnzylhgHc where the connectome was combined with "muscle" movements of the worm with some simple algorithms> these were translated into a robot.
 
 ![image info](figures/c-elegans-fig01-20190308092545.jpg)
-![Alt Text](http://www.scicom-lab.com/screens/assets/meta-worm.gif)
-
 
 #### Below shows the connectome of a c eligan projected onto the body of the worm. 
 ![image info](figures/medium.png)
 
 Eeach node holds some metadata in the form of:
 
-- cell_id : auto-inc cell ID
-- cell_name : official cell name, from original brenner paper
-- cell_class : an attempt at determining the cell class
-- soma_pos : position along the body axis, range : [0, 1]
-- role: text string of Motor, sensory, interneuron
-- neurotransmitter: text string of type of neurotransmitter
+- Cell_id : auto-inc cell ID
+- Cell_name : official cell name, from original brenner paper
+- Cell_class : an attempt at determining the cell class
+- Soma_pos : position along the body axis, range : [0, 1]
+- Role: text string of Motor, sensory, interneuron
+- Neurotransmitter: text string of type of neurotransmitter
 
 #### Below is the network in our code environment. 
 > The data contained information on the direction and number of connections via chemical synapses and electrical junctions among neurons in the entire nervous system as well as one-dimensional spatial positions of neurons (i.e., somal centers) along the anterior-posterior body axis. All connections between non-pharyngeal neurons were included except those of CANL/R and VC6, which did not have obvious synapses. Consequently, the model connectome had 279 neurons.
