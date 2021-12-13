@@ -34,6 +34,8 @@
 ##### C elegans are of huge interest to the feild of bioinformatics as they provide a link between nervous system connectivity and machanical movement. This was demonstrated https://www.youtube.com/watch?v=YWQnzylhgHc where the connectome was combined with "muscle" movements of the worm with some simple algorithms> these were translated into a robot.
 
 ![image info](figures/c-elegans-fig01-20190308092545.jpg)
+![Alt Text](http://www.scicom-lab.com/screens/assets/meta-worm.gif)
+
 
 #### Below shows the connectome of a c eligan projected onto the body of the worm. 
 ![image info](figures/medium.png)
