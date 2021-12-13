@@ -25,7 +25,11 @@
 
 ## Reasults of community detection conmnectome cortical netowrks.
 ##### A 'connectome' is a specific, cell-to-cell mapping of axonal tracts between neurons, created from cellular data like electron microscopy. 
+
+### C elegans are of huge interest to the feild of bioinformatics as they provide a link between nervous system connectivity and machanical movement. This was demonstrated https://www.youtube.com/watch?v=YWQnzylhgHc where the connectome was combined with "muscle" movements of the worm with some simple algorithms> these were translated into a robot.
+ 
 ![image info](figures/c-elegans-fig01-20190308092545.jpg)
+![image info](figures/medium.png)
 
 Eeach node holds some metadata in the form of:
 
