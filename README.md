@@ -33,7 +33,7 @@
 
 | Normalised mutual information      | Modularity     |  Adjusted mutual information | Maximal Jaccard index |
 | -------------- | -------------- | -------------- |-------------- |
-| ![image info](figures/n250NMI.png)   | ![image info](figures/n250Q.png)   |![image info](figures/n25AMI.png)   | ![image info](figures/n250MaxJaccard.png)   |
+| ![image info](figures/n250NMI.png)   | ![image info](figures/n250Q.png)   |![image info](figures/n250AMI.png)   | ![image info](figures/n250MaxJaccard.png)   |
 | ![image info](figures/n500NMI.png)| ![image info](figures/n500Q.png) |![image info](figures/n500AMI.png)| ![image info](figures/n500MaxJaccard.png) |
 | ![image info](figures/n1000NMI.png)| ![image info](figures/n1000Q.png) |![image info](figures/n1000AMI.png)| ![image info](figures/n1000MaxJaccard.png) |
 
