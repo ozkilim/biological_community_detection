@@ -1,3 +1,4 @@
+from typing import ValuesView
 import networkx as nx
 import matplotlib
 import matplotlib.pyplot as plt
@@ -11,6 +12,9 @@ import numpy as np
 import infomap
 import random
 from infomap import Infomap
+import statistics
+
+
 
 def presentCommunities(G,communities):
     '''
@@ -176,3 +180,43 @@ class CommunityDetectionAlgorithms:
             sc_partition[c].append(idx)
 
         return sc_partition
+
+
+def jaccard_similarity(list1, list2):
+    intersection = len(set(list1).intersection(list2))
+    union = len(set(list1)) + len(set(list2)) - intersection
+
+    return intersection / union
+
+def max_jaccard(ground_truth_communites_vector,communities_vector):
+    '''
+    maximal Jaccard-index for a given community with any possible communities from 
+    the other partition, 
+    Then averaging this over the communities. 
+    (A slight drawback, that this quantity is not "symmetric", 
+    i.e., we should calculate it from the perspective of both 
+    partitions separately, and then we can again, take the larger value).
+    '''
+    forward_max_list = []
+    backwards_max_list = []
+
+    for found_community in communities_vector:
+        forward_score = []
+        backward_score = []
+        for true_community in ground_truth_communites_vector:
+            scores_forward = jaccard_similarity(list(true_community), found_community) 
+            scores_backwards = jaccard_similarity(found_community,list(true_community))
+            forward_score.append(scores_forward)
+            backward_score.append(scores_forward)
+        #get the max for that found_community when compared to all others. Append to list of max's
+        forward_max_list.append(max(forward_score))
+        backwards_max_list.append(max(backward_score))
+
+    # Average over max values
+    f = statistics.mean(forward_max_list)
+    b = statistics.mean(backwards_max_list)
+
+    # Pick the max direction
+    max_score = max(f,b)
+    return max_score
+

@@ -14,8 +14,8 @@
 
 #### The algorithms will be evaluated with:
 
-| Normalised mutual information (NMI)      | Modularity  (Q)   |
-| -------------- | -------------- |
+| Normalised mutual information (NMI)      | Modularity  (Q)   | Modularity  (AMI)   | Maximum Jaccard(MaxJaccard)   |
+| -------------- | -------------- |-------------- |-------------- |
 | ![image info](figures/nmi.png)   | ![image info](figures/modularity.png)   |
 
 
@@ -31,11 +31,11 @@
 #### Below show the variation if NMI and Q for the synthetic LFR graph with varying number of nodes (250, 500 and 1000) with and mixing perameter between 0-1. The mixing perameter increase detroys the community structure in a controlled manner so community finding algorithms can be evaluated against each other when communites become less well defined.
 
 
-| Normalised mutual information      | Modularity     |
-| -------------- | -------------- |
-| ![image info](figures/n250NMI.png)   | ![image info](figures/n250Q.png)   |
-| ![image info](figures/n500NMI.png)| ![image info](figures/n500Q.png) |
-| ![image info](figures/n1000NMI.png)| ![image info](figures/n1000Q.png) |
+| Normalised mutual information      | Modularity     |  Adjusted mutual information | Maximal Jaccard index |
+| -------------- | -------------- | -------------- |-------------- |
+| ![image info](figures/n250NMI.png)   | ![image info](figures/n250Q.png)   |[image info](figures/n25ANMI.png)   | ![image info](figures/n250MaxJaccard.png)   |
+| ![image info](figures/n500NMI.png)| ![image info](figures/n500Q.png) |![image info](figures/n500AMI.png)| ![image info](figures/n500MaxJaccard.png) |
+| ![image info](figures/n1000NMI.png)| ![image info](figures/n1000Q.png) |![image info](figures/n1000AMI.png)| ![image info](figures/n1000MaxJaccard.png) |
 
 ## Real world netwroks : Community detection for conmnectome cortical netowrks.
 
