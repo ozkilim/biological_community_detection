@@ -14,10 +14,9 @@
 
 #### The algorithms will be evaluated with:
 
-| Normalised mutual information (NMI)      | Modularity  (Q)   | Modularity  (AMI)   | Maximum Jaccard(MaxJaccard)   |
+| Normalised mutual information (NMI)      | Modularity  (Q)   | Adjusted mutual information  (AMI)   | Maximum Jaccard index (MaxJaccard)   |
 | -------------- | -------------- |-------------- |-------------- |
-| ![image info](figures/nmi.png)   | ![image info](figures/modularity.png)   |
-
+| ![image info](figures/nmi.png)   | ![image info](figures/modularity.png) |![image info](figures/AMI.png) |![image info](figures/Jaccard.png)   |
 
 ##### These scores are with respect to the ground truth communities. 
 
