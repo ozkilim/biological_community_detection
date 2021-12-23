@@ -82,7 +82,7 @@ Eeach node holds some metadata in the form of:
 | -------------- | -------------- |
 | ![image info](figures/cortex_community_cellrole_overlap_NMI.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap_NMI.png)   |
 | ![image info](figures/cortex_community_cellrole_overlap_AMI.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap_AMI.png)   |
-| ![image info](figures/cortex_community_cellrole_overlap_max.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap_maxj.png)   |
+| ![image info](figures/cortex_community_cellrole_overlap_maxj.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap_maxj.png)   |
 
 ##### Here we can see that both the Cell Role and Neurotransmitter status of each node are not aligned with the community strucutre in connectivity of the connectome. There is existance of weak community structure but of weak biological significance. 
 
