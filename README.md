@@ -11,6 +11,9 @@
 #### The aim of this project is to evaluate community detection algorithms on synthetic and C. elegans connectome networks.
 
 * Full course notes on the topic can be found here: https://docs.google.com/document/d/19IIG6hELzsp0FxOnjmT8YMZQAnOht_8BsvzqTOSWGfY/edit?usp=sharing
+### Baseline script found at `Processing/LFR_plot_creation.ipynb`
+### C_ELigan script found at `Processing/Worm_cortex.ipynb`
+### Util fucntions found at `Processing/utils.py`
 
 #### The algorithms will be evaluated with:
 
@@ -77,7 +80,9 @@ Eeach node holds some metadata in the form of:
 
 | Cell role     | Neurotransmitter     |
 | -------------- | -------------- |
-| ![image info](figures/cortex_community_roles_overlap.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap.png)   |
+| ![image info](figures/cortex_community_cellrole_overlap_NMI.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap_NMI.png)   |
+| ![image info](figures/cortex_community_cellrole_overlap_AMI.png)   | ![image info](figures/cortex_community_neurotransmitters_overlap_AMI.png)   |
+| ![image info](figures/cortex_community_cellrole_overlap_max.pngj)   | ![image info](figures/cortex_community_neurotransmitters_overlap_maxj.png)   |
 
 ##### Here we can see that both the Cell Role and Neurotransmitter status of each node are not aligned with the community strucutre in connectivity of the connectome. There is existance of weak community structure but of weak biological significance. 
 
